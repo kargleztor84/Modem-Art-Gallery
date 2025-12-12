@@ -2,19 +2,37 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Big Shoulders", sans-serif;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$code-font-stack: "Outfit", sans-serif;
 
 // Colores:
+$orange: #D5966C;
+$black: #151515;
+$gray: #444444;
+$white: #fff;
+
+// Encabezados:
+$subtitle-l: 3.5rem;
+$line-l: 3.5rem;
+
+$encabezado-m: 3rem;
+$line-m: 2.8rem;
+
+$encabezado-s: 2rem;
+$line-s: 2rem;
+
+
+$text-size-m: 1.25rem;
+$lineM: 2rem;
+
+$text-size-s: 1rem;
+$lineS: 1.5rem;
+
 
 /// Container's maximum width
 /// @type Length
@@ -25,7 +43,7 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-	'small': 320px,
+	'small': 375px,
 	'medium': 768px,
 	'large': 1024px,
 );
