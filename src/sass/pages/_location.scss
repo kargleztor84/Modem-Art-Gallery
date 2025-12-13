@@ -1,5 +1,7 @@
 @use '../abstracts';
 
 .location__btn {
-    @include abstracts.dinamic-btn('before', end)
+    @include abstracts.dinamic-btn('before', end);
+    position: absolute;
+    top: 0;
 }
