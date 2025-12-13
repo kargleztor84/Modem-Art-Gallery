@@ -1,3 +1,5 @@
+@use './variables';
+
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
@@ -7,28 +9,79 @@
 /// @param {Bool} $self [false] - Whether or not to include current selector
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:focus,
-    &:focus-within {
-      @content;
+    @if $self {
+        &,
+        &:hover,
+        &:focus,
+        &:focus-within {
+        @content;
+        }
+    } @else {
+        &:hover,
+        &:focus,
+        &:focus-within {
+        @content;
+        }
     }
-  } @else {
-    &:hover,
-    &:focus,
-    &:focus-within {
-      @content;
-    }
-  }
+}
+
+@mixin dinamic-btn ($pseudoclass: 'after', $align: start) {   
+    position: relative;
+    text-align: $align;
+    background-color: variables.$black;
+    font-size: 1.25rem;
+    font-family: variables.$code-font-stack;
+    letter-spacing: 3.64px;
+    padding: 23px 32px;
+    width: 80%;
+
+    @if $pseudoclass == 'after'{
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-image: url(../../../img/arrow-icon.svg);
+            background-repeat: no-repeat;
+            background-color: variables.$orange;
+            background-position: center;
+        }
+
+        @include on-event {
+            background-color: variables.$orange;
+            &::after {background-color: variables.$black;}
+        }
+
+    } @else {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url(../../../img/arrow-icon.svg);
+            background-repeat: no-repeat;
+            background-color: variables.$orange;
+            background-position: center;
+            rotate: 180deg;
+        }
+
+        @include on-event {
+            background-color: variables.$orange;
+            &::before {background-color: variables.$black;}
+        }
+    }  
 }
 
 /// Make a context based selector a little more friendly
 /// @author Kitty Giraudel
 /// @param {String} $context
 @mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
+    #{$context} & {
+        @content;
+    }
 }
 

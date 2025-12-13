@@ -1,29 +1,3 @@
-@use '../abstracts';
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-
-.btn {
-    position: relative;
-    inset: 0;
-    margin: auto;
-    background-color: abstracts.$black;
-    font-size: 1.25rem;
-    font-family: abstracts.$code-font-stack;
-    letter-spacing: 3.64px;
-    padding: 24px 32px;
-    width: 78%;
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 24%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background-image: url(../../../img/arrow-icon.svg);
-        background-repeat: no-repeat;
-        background-color: abstracts.$orange;
-        background-position: center;
-    }
-}

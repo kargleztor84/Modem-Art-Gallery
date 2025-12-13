@@ -3,12 +3,13 @@
 
 .hero {
 
+    margin-bottom: 7.5rem;
+
     .hero__img {
         margin-bottom: 2rem;
     }
 
     h1 {
-        font-family: abstracts.$code-font-stack;
         font-size: 4.45rem;
         line-height: 3.8rem;
         font-weight: 900;
@@ -16,17 +17,10 @@
     }
 
     p {
-        font-size: 1.1rem;
-        line-height: abstracts.$lineS;
-        font-weight: 300;
         margin-bottom: 2rem;
     }
     
     a {
-        @extend .btn;
-
-        // @include on-event {
-
-        // }
+        @include abstracts.dinamic-btn('after')
     }
 }
