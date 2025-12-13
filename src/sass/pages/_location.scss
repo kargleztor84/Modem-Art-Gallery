@@ -1,0 +1,5 @@
+@use '../abstracts';
+
+.location__btn {
+    @include abstracts.dinamic-btn('before', end)
+}

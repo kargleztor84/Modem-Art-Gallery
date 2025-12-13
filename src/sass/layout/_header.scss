@@ -23,7 +23,7 @@
         margin-bottom: 2rem;
     }
     
-    a {
+    .header__btn {
         @include abstracts.dinamic-btn('after')
     }
 }

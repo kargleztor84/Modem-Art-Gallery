@@ -33,15 +33,16 @@
     background-color: variables.$black;
     font-size: 1.25rem;
     font-family: variables.$code-font-stack;
+    font-weight: 600;
     letter-spacing: 3.64px;
-    padding: 23px 32px;
-    width: 80%;
+    padding: 18px 25px;
+    width: 70%;
 
     @if $pseudoclass == 'after'{
         &::after {
             content: '';
             position: absolute;
-            width: 24%;
+            width: 20%;
             height: 100%;
             top: 0;
             right: 0;
@@ -60,7 +61,7 @@
         &::before {
             content: '';
             position: absolute;
-            width: 25%;
+            width: 20%;
             height: 100%;
             top: 0;
             left: 0;
