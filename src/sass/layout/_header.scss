@@ -5,11 +5,13 @@
 // -----------------------------------------------------------------------------
 
 .header {
-
     margin-bottom: 7.5rem;
 
     .header__img {
         margin-bottom: 2rem;
+        .header__img--big {
+            display: none;
+        }
     }
 
     h1 {
@@ -25,5 +27,29 @@
     
     .header__btn {
         @include abstracts.dinamic-btn('after')
+    }
+
+    @include abstracts.responsive(medium) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header__img {
+            .header__img--small {
+                display: none;
+            }
+
+            .header__img--big {
+                display: initial;
+            }
+            
+        }
+
+        .container {
+            padding: 0 50px 0 0;
+            margin-left: -70px;
+            h1 {
+                font-size: 4.2rem;
+            }
+        }
     }
 }

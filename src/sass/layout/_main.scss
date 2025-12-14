@@ -17,6 +17,30 @@
         }
 
         margin-bottom: 2rem;
+
+        @include abstracts.responsive(medium) {
+
+            margin-bottom: .7rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 25rem;
+            grid-template-areas: 
+            'text img';
+
+            .main__header--img {
+                margin: 0;
+                grid-area: img;
+                align-self: stretch;
+                object-fit: cover;
+            }
+
+            .main__header--text {
+                width: 80%;
+                grid-area: text;
+                margin-top: 1rem;
+            }
+        }
     }
 
     &__gallery {
@@ -34,6 +58,32 @@
                 font-size: 3.125rem;
                 line-height: 2.8rem;
                 margin-bottom: 1.5rem;
+            }
+        }
+
+        @include abstracts.responsive(medium) {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            'uno dos'
+            'uno tres';
+            gap: .7rem;
+
+            .salon-2 {
+                grid-area: uno;
+                align-self: stretch;
+                object-fit: cover;
+            }
+
+            .salon-3 {
+                grid-area: dos;
+                align-self: stretch;
+                object-fit: cover;
+            }
+
+            img {
+                margin: 0;
             }
         }
     }

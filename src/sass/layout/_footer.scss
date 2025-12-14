@@ -27,5 +27,26 @@
         a+a {
             margin-left: 1rem;
         }
+
+        @include abstracts.responsive(medium) {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            h4 {
+                flex: 1;
+                margin-bottom: 0;
+            }
+
+            p {
+                flex: 1.5;
+                margin-bottom: 1px;
+            }
+
+            nav {
+                text-align: end;
+                flex: 1;
+            }
+        }
     } 
 }

@@ -1,11 +1,17 @@
 @use '../abstracts';
 
 .header__location {
-    background-color: abstracts.$black;
+    display: flex;
     &--btn {
         @include abstracts.dinamic-btn('before', end);
         position: absolute;
         top: 0;
+    }
+
+    @include abstracts.responsive(medium) {
+        &--btn {
+            margin-left: 3rem;
+        }
     }
 }
 
@@ -33,6 +39,25 @@
         line-height: 1.7rem;
         margin-bottom: 1.25rem;
     }
+
+    @include abstracts.responsive(medium) {
+        padding-top: 4rem;
+        padding-inline: 2.5rem;
+
+        .container {
+            display: flex;
+            gap: 6rem;
+
+            h2 {
+                line-height: 2.8rem;
+            }
+            
+            p:last-of-type {
+                // width: 84%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }
 
 .footer__location {
@@ -58,6 +83,27 @@
 
         a+a {
             margin-left: 1rem;
+        }
+
+        @include abstracts.responsive(medium) {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+    
+            h4 {
+                flex: 1;
+                margin-bottom: 0;
+            }
+    
+            p {
+                flex: 1.5;
+                margin-bottom: 1px;
+            }
+    
+            nav {
+                text-align: end;
+                flex: 1;
+            }
         }
     }
 }
