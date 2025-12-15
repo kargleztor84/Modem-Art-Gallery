@@ -7,5 +7,5 @@ export default defineConfig ({
         }
     },
 
-    base: '/Modem-Art-Gallery/'
+    base: 'https://kargleztor84.github.io/Modem-Art-Gallery/'
 })
