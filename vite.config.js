@@ -5,5 +5,7 @@ export default defineConfig ({
         hmr: {
             overlay: false,
         }
-    }
+    },
+
+    base: '/Modem-Art-Gallery/'
 })
