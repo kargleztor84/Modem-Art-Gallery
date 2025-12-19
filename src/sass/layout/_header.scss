@@ -7,90 +7,104 @@
 .header {
     margin-bottom: 7.5rem;
 
-    .header__img {
+    &__img {
         margin-bottom: 2rem;
+
         &--big {
             display: none;
         }
     }
 
-    h1 {
-        font-size: 4.45rem;
-        line-height: 3.8rem;
-        font-weight: 900;
-        margin-bottom: 2rem;
-    }
-
-    p {
-        margin-bottom: 2rem;
-    }
+    &__text {
+        &--h1 {
+            font-size: 74px;
+            line-height: 65px;
+            font-weight: 800;
+            margin-bottom: 48px;
+        }
     
-    .header__btn {
-        @include abstracts.dinamic-btn('after')
+        p {
+            margin-bottom: 48px;
+        }
+        
+        &--btn {
+            @include abstracts.dinamic-btn('after')
+        }
     }
 
+    // vista tablet del header
     @include abstracts.responsive(medium) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .header__img {
+        position: relative;
+
+        &__img {
+
             &--small {
                 display: none;
             }
 
             &--big {
+                width: 60%;
                 display: initial;
             }
-            
         }
 
-        .container {
-            padding: 0 50px 0 0;
-            margin-left: -70px;
-            h1 {
-                font-size: 4.2rem;
+        &__text {
+            width: 380px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+
+            &--h1 {
+                width: 335px;
             }
         }
     }
 
-    @include abstracts.responsive(large) {
+    // Vista desktop del header
+    @include abstracts.responsive(xl) {
+
+        font-size: abstracts.$text-body-m;
+        line-height: abstracts.$lineM;
         position: relative;
         display: grid;
-        justify-items: center;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
         '. dos .';
         background-image: linear-gradient(to right, abstracts.$black 33.3%, abstracts.$white 33.3%);
 
-        .header__img {
+        &__img {
             grid-area: dos;
-            margin: 0;
+            margin: initial;
+
+            &--small {
+                display: none;
+            }
 
             &--big {
+                width: 100%;
                 display: flex;
             }
         }
         
-        .container {
-            margin: 0;
-            padding: 0;
+        &__text {
             position: absolute;
-            display: grid;
-            justify-items: end;
-            grid-template-columns: 1fr 1fr;
+            inset: 0;
+            width: 76%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12%;
 
-            .container__h1 {
+            &--h1 {
+                width: 430px;
+                font-size: 96px;
+                line-height: 88px;
                 color: white;
-                justify-self: start;
-            }
-
-            .header__btn {
-                grid-column: 2 / span 1
             }
 
             p {
-                width: 64%;
-                // margin-left: 50px;
+                font-size: abstracts.$text-body-m;
+                line-height: abstracts.$lineM;
+                width: 350px;
             }
         }
     }

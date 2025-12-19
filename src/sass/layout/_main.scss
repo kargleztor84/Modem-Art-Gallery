@@ -1,8 +1,10 @@
 @use '../abstracts';
+@use '../base/helpers';
 
 .main {
     margin-bottom: 7.5rem;
 
+    // ------ main__header ------
     &__header {
 
         img {
@@ -10,20 +12,18 @@
         }
 
         h2 {
-            font-size: 3.125rem;
-            line-height: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
+            @extend .style-h2
         }
 
         margin-bottom: 2rem;
 
+        // Vista tablet del main__header
         @include abstracts.responsive(medium) {
 
-            margin-bottom: .7rem;
+            margin-bottom: .8rem;
 
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
+            grid-template-columns: 1fr 1.4fr;
             grid-template-rows: 25rem;
             grid-template-areas: 
             'text img';
@@ -38,11 +38,17 @@
             .main__header--text {
                 width: 80%;
                 grid-area: text;
+                align-self: center;
                 margin-top: 1rem;
+
+                p{
+                    width: 95%;
+                }
             }
         }
     }
 
+    // ------ main__gallery ------
     &__gallery {
 
         img {
@@ -51,24 +57,23 @@
 
         &--text {
             color: abstracts.$white;
-            padding: 3rem 1.5rem;
+            padding: 85px 22px;
             background-color: abstracts.$black;
 
             h2 {
-                font-size: 3.125rem;
-                line-height: 2.8rem;
-                margin-bottom: 1.5rem;
+                @extend .style-h2;
             }
         }
 
+        // VIsta tablet del main__gallery
         @include abstracts.responsive(medium) {
             display: grid;
             grid-template-columns: 1.8fr 1fr;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1fr 1.5fr;
             grid-template-areas: 
             'uno dos'
             'uno tres';
-            gap: .7rem;
+            gap: .8rem;
 
             .salon-2 {
                 grid-area: uno;

@@ -36,7 +36,7 @@
     font-family: variables.$code-font-stack;
     font-weight: 600;
     letter-spacing: 3.64px;
-    padding: 18px 32px;
+    padding: 24px 34px;
     width: 260px;
 
     @if $pseudoclass == 'after'{
@@ -91,7 +91,8 @@
 
 // mixin responsive
 @mixin responsive ($breakpoint) {
-	@media screen and (width >= map.get(variables.$breakpoints, $breakpoint)) {
+	@media (map.get(variables.$breakpoints, $breakpoint) <= width) {
+
 		@content;
 	}
 }

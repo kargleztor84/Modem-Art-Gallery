@@ -17,24 +17,24 @@ $gray: #444444;
 $white: #fff;
 
 // Encabezados:
-$title: 5rem;
-$line-xl: 4.3rem;
+$H-xl: 96px;
+$line-xl: 88px;
 
-$subtitle-l: 3.5rem;
-$line-l: 3.5rem;
+$H-l: 70px;
+$line-l: 70px;
 
-$encabezado-m: 3rem;
-$line-m: 2.8rem;
+$H-m: 60px;
+$line-m: 50px;
 
-$encabezado-s: 2rem;
-$line-s: 2rem;
+$H-s: 36px;
+$line-s: 36px;
 
 
-$text-body-m: 1.25rem;
-$lineM: 2rem;
+$text-body-m: 22px;
+$lineM: 32px;
 
-$text-body-s: 1rem;
-$lineS: 1.7rem;
+$text-body-s: 18px;
+$lineS: 28px;
 
 
 /// Container's maximum width
@@ -49,6 +49,7 @@ $breakpoints: (
 	'small': 375px,
 	'medium': 768px,
 	'large': 1024px,
+	'xl': 1440px,
 );
 
 /// Relative or absolute URL where all assets are served from
