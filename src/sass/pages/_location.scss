@@ -16,7 +16,7 @@
     // --- Viata tablet del header ---
     @include abstracts.responsive(medium) {
         &--btn {
-            margin-left: 3rem;
+            margin-left: 7%;
         }
     }
 
@@ -90,7 +90,7 @@
 .footer__location {
 
     background-color: abstracts.$orange;
-    padding: 48px 10px;
+    padding: 48px 4%;
 
     .container {
 
