@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig ({
     server: {
@@ -12,9 +13,9 @@ export default defineConfig ({
     build: {
         rollupOptions: {
             input: {
-                main: "index.html",
-                location: "location.html",
+                main: resolve(__dirname, "index.html"),
+                location: resolve(__dirname, "location/index.html"),
             },
         },
-    }
+    },
 })
