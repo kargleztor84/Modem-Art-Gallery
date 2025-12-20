@@ -7,5 +7,14 @@ export default defineConfig ({
         }
     },
 
-    base: 'https://kargleztor84.github.io/Modem-Art-Gallery/'
+    base: 'https://kargleztor84.github.io/Modem-Art-Gallery/',
+
+    build: {
+        rollupOptions: {
+            input: {
+                main: "index.html",
+                location: "location.html",
+            },
+        },
+    }
 })

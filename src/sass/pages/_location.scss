@@ -23,7 +23,7 @@
     // --- Vista desktop del header ---
     @include abstracts.responsive(xl) {
         &--btn {
-            margin-left: 156px;
+            margin-left: 10%;
         }
     }
 }
